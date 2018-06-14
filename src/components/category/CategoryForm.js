@@ -1,10 +1,14 @@
 import React from "react";
-import { Button } from "antd";
+import { Modal } from "antd";
 
 const CategoryForm = props => {
   return (
     <div>
-      <Button>Add Category</Button>
+      <Modal title="Basic Modal">
+        <p>Some contents...</p>
+        <p>Some contents...</p>
+        <p>Some contents...</p>
+      </Modal>
     </div>
   );
 };

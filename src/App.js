@@ -10,14 +10,7 @@ class App extends Component {
     return (
       <Layout className="App" style={{ height: "100vh" }}>
         <Layout>
-          <Sider
-            style={{
-              overflow: "auto",
-              height: "100vh",
-              position: "fixed",
-              left: 0
-            }}
-          >
+          <Sider>
             <SiderContainer />
           </Sider>
           <Content>main content</Content>
