@@ -1,5 +1,6 @@
 import * as actionTypes from "../actions/ActionTypes";
 import CategoryForm from "./CategoryForm";
+import * as groups from "../actions/ActionGroups";
 
 var initialState = {
   categories: [],
@@ -14,6 +15,12 @@ const Categories = (
   state = initialState,
   action = actionTypes.LOAD_CATEGORIES_BEGIN
 ) => {
+  if (action.group == groups.CATEGORY_FORM) {
+    return {
+      ...state
+    };
+  }
+
   switch (action.type) {
     case actionTypes.SELECT_CATEGORY:
       return {
@@ -31,17 +38,18 @@ const Categories = (
       return {
         ...state,
         isFormOpen: true,
-        newCategory: {
+        categoryForm: {
           title: ""
         }
       };
     case actionTypes.ADD_CATEGORY:
       var newCategory = CategoryForm(state, action);
-      console.log(newCategory);
+      console.log(action.title);
       return {
         ...state,
         isFormOpen: false,
-        categories: [...state.categories, newCategory]
+        categories: [...state.categories, newCategory],
+        newCategory: null
       };
     case actionTypes.CANCEL_CATEGORY_FORM:
       return { ...state, isFormOpen: false };

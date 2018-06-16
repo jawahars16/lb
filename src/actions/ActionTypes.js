@@ -7,3 +7,5 @@ export const OPEN_CATEGORY_FORM = "OPEN_CATEGORY_FORM";
 // Category Form
 export const ADD_CATEGORY = "ADD_CATEGORY";
 export const CANCEL_CATEGORY_FORM = "CANCEL_CATEGORY_FORM";
+export const LOAD_ICONS_BEGIN = "LOAD_ICONS_BEGIN";
+export const LOAD_ICONS_END = "LOAD_ICONS_END";

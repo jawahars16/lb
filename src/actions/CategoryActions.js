@@ -1,10 +1,10 @@
-import * as repository from "../data/CategoryRepository";
+import * as categoryRepository from "../data/CategoryRepository";
 import * as types from "./ActionTypes";
 
 export function loadCategories() {
   return function(dispatch) {
     dispatch(loadCategoriesBegin());
-    return repository.getCategories().then(data => {
+    return categoryRepository.getCategories().then(data => {
       dispatch(loadCategoriesEnd(data));
     });
   };
@@ -32,18 +32,5 @@ export function loadCategoriesEnd(categories) {
 export function openCategoryForm() {
   return {
     type: types.OPEN_CATEGORY_FORM
-  };
-}
-
-export function addCategory(title) {
-  return {
-    type: types.ADD_CATEGORY,
-    title
-  };
-}
-
-export function cancelCategoryForm() {
-  return {
-    type: types.CANCEL_CATEGORY_FORM
   };
 }

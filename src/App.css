@@ -42,6 +42,7 @@
 .ant-layout-sider {
   background: #fff;
   line-height: 120px;
+  border-right: 1px solid #e8e8e8;
 }
 .ant-layout-content {
   background: #fff;
