@@ -17,6 +17,7 @@ class CategoryContainer extends React.Component {
         <CategoryForm
           open={this.props.isFormOpen}
           form={this.props.categoryForm}
+          handleLoadIcons={this.props.categoryFormActions.loadIcons}
           handleOk={this.props.categoryFormActions.addCategory}
         />
         <CategoryList

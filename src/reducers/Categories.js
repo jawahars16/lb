@@ -5,10 +5,7 @@ import * as groups from "../actions/ActionGroups";
 var initialState = {
   categories: [],
   selectedCategory: null,
-  isFormOpen: false,
-  newCategory: {
-    title: ""
-  }
+  isFormOpen: false
 };
 
 const Categories = (
@@ -39,7 +36,8 @@ const Categories = (
         ...state,
         isFormOpen: true,
         categoryForm: {
-          title: ""
+          title: "",
+          icons: []
         }
       };
     case actionTypes.ADD_CATEGORY:
